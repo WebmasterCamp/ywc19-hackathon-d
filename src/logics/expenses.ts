@@ -47,4 +47,59 @@ export const expenses: Expenses = {
 			},
 		],
 	},
+	powdered_milk: {
+		title: 'ค่านมผง',
+		choices: [
+			{
+				title: 'Tier 2 (1 ปี)',
+				price: 700 * 12,
+			},
+			{
+				title: 'Tier 1 (1 ปี)',
+				price: 1700 * 12,
+			},
+			{
+				title: 'Tier 2 (2 ปี)',
+				price: 700 * 24,
+			},
+			{
+				title: 'Tier 1 (2 ปี)',
+				price: 1700 * 24,
+			},
+		],
+	},
+	baby_sitter: {
+		title: 'ค่าพี่เลี้ยงเด็กทารก',
+		choices: [
+			{
+				title: 'ทารกแรกเกิด 10 เดือนแรก',
+				price: 14000 * 10,
+			},
+			{
+				title: 'เด็กทารก 2 ปีแรก',
+				price: 14000 * 10 + 10000 * 14,
+			},
+			{
+				title: 'เด็กทารก 3 ปีแรก',
+				price: 14000 * 10 + 10000 * 26,
+			},
+		],
+	},
+	preschool: {
+		title: 'ค่าเทอมวัยอนุบาล (3 ปี)',
+		choices: [
+			{
+				title: 'Tier 3',
+				price: 17000 * 3,
+			},
+			{
+				title: 'Tier 2',
+				price: 30000 * 3,
+			},
+			{
+				title: 'Tier 1',
+				price: 100000 * 3,
+			},
+		],
+	},
 }
