@@ -20,7 +20,9 @@ const ExpensesPage = () => {
   return (
     <Layout>
       <h1 className="font-bold">Expenses</h1>
-      <Table columns={columns} dataSource={expenses} rowKey="title" />
+      <Table columns={columns} dataSource={expenses} rowKey="title" rowSelection={{
+        type: "checkbox"
+      }}/>
     </Layout>
   )
 }
