@@ -2,6 +2,7 @@ import { Layout } from "~/components/Layout"
 import { type Expense, expenses } from "~/constants/expenses"
 import { Table } from "antd"
 import { type ColumnsType } from "antd/es/table"
+import { Navbar } from "~/components/Navbar";
 
 const columns: ColumnsType<Expense> = [
   {
@@ -19,10 +20,13 @@ const columns: ColumnsType<Expense> = [
 const ExpensesPage = () => {
   return (
     <Layout>
-      <h1 className="font-bold">Expenses</h1>
-      <Table columns={columns} dataSource={expenses} rowKey="title" rowSelection={{
-        type: "checkbox"
-      }}/>
+      <div className="flex flex-col gap-y-20 p-8">
+        <h1 className="text-xl font-bold">เริ่มคำนวณวางแผนการเงินให้ลูกในอนาตคของคุณ</h1>
+        <div>
+          {/* receive user income UI here */}
+        </div>
+
+      </div>
     </Layout>
   )
 }

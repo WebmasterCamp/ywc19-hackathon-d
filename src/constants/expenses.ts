@@ -103,4 +103,17 @@ export const expenses: Expense[] = [
 			},
 		],
 	},
+	{
+		title : "ค่าเทอมชั้นประถมวัย (6 ปี)",
+		choices :[{
+			title : "Tier 3",
+			price : 8000 * 6
+		},{
+			title : "Tier 2",
+			price : 18000 * 6
+		}, {
+			title : "Tier 1",
+			price : 36000 * 6
+		}]
+	}
 ]

@@ -1,4 +1,5 @@
 import type { FC, ReactNode } from "react";
+import { Navbar } from "../Navbar";
 
 interface LayoutProps {
   children: ReactNode
@@ -6,10 +7,9 @@ interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="flex items-center">
-      <div className="p-4">
-        {children}
-      </div>
+    <div className="flex flex-col w-full">
+      <Navbar />
+      <div className="p-4">{children}</div>
     </div>
   )
 }
