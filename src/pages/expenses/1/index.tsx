@@ -1,20 +1,5 @@
-import { type ColumnsType } from 'antd/es/table'
 import { Layout } from '~/components/Layout'
 import { ExpenseLayout } from '~/components/Layout/ExpenseLayout'
-import { type Expense } from '~/constants/expenses'
-
-const columns: ColumnsType<Expense> = [
-	{
-		title: 'Title',
-		dataIndex: 'title',
-		key: 'title',
-	},
-	{
-		title: 'Description',
-		dataIndex: 'description',
-		key: 'description',
-	},
-]
 
 const ExpensesPage = () => {
 	return (
