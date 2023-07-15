@@ -1,18 +1,19 @@
-interface Expenses {
-	[name: string]: {
-		title: string
-		description?: string
-		choices: {
-			title: string
-			description?: string
-			imageURL?: string
-			price: number
-		}[]
-	}
+export interface ExpenseChoice {
+	title: string
+	description?: string
+	imageURL?: string
+	price: number
 }
 
-export const expenses: Expenses = {
-	antenatal_care: {
+export interface Expense {
+		title: string
+		description?: string
+		choices: ExpenseChoice[]	
+	}
+
+
+export const expenses: Expense[] = [
+	{
 		title: 'ค่าฝากครรภ์',
 		description: 'สามารถลดค่าใช้จ่ายด้วยสิทธิประกันสังคม ศึกษาเพิ่มเติมได้จาก www.google.com',
 		choices: [
@@ -26,7 +27,7 @@ export const expenses: Expenses = {
 			},
 		],
 	},
-	give_birth: {
+	{
 		title: 'ค่าทำคลอด',
 		choices: [
 			{
@@ -47,7 +48,7 @@ export const expenses: Expenses = {
 			},
 		],
 	},
-	powdered_milk: {
+	{
 		title: 'ค่านมผง',
 		choices: [
 			{
@@ -68,7 +69,7 @@ export const expenses: Expenses = {
 			},
 		],
 	},
-	baby_sitter: {
+	{
 		title: 'ค่าพี่เลี้ยงเด็กทารก',
 		choices: [
 			{
@@ -85,7 +86,7 @@ export const expenses: Expenses = {
 			},
 		],
 	},
-	preschool: {
+	{
 		title: 'ค่าเทอมวัยอนุบาล (3 ปี)',
 		choices: [
 			{
@@ -102,4 +103,4 @@ export const expenses: Expenses = {
 			},
 		],
 	},
-}
+]
