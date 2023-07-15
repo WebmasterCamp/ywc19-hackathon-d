@@ -3,6 +3,7 @@ import { type Expense, expenses } from "~/constants/expenses"
 import { Table } from "antd"
 import { type ColumnsType } from "antd/es/table"
 import { Navbar } from "~/components/Navbar";
+import { ExpenseLayout } from "~/components/Layout/ExpenseLayout";
 
 const columns: ColumnsType<Expense> = [
   {
@@ -20,13 +21,12 @@ const columns: ColumnsType<Expense> = [
 const ExpensesPage = () => {
   return (
     <Layout>
-      <div className="flex flex-col gap-y-20 p-8">
-        <h1 className="text-xl font-bold">เริ่มคำนวณวางแผนการเงินให้ลูกในอนาตคของคุณ</h1>
+      <ExpenseLayout title="เริ่มคำนวณวางแผนการเงินให้ลูกในอนาคตของคุณ">
         <div>
           {/* receive user income UI here */}
         </div>
+      </ExpenseLayout>
 
-      </div>
     </Layout>
   )
 }
