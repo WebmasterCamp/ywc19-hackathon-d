@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react"
+import { type FC, type ReactNode } from "react"
 
 interface ExpenseLayoutProps {
     title: string,
@@ -10,7 +10,7 @@ export const ExpenseLayout: FC<ExpenseLayoutProps> = ({
     children
 }) => {
     return (
-        <div className="flex flex-col gap-y-20 p-8">
+        <div className="font-noto flex flex-col gap-y-20 p-8">
             <h1 className="text-xl font-bold">
                 {title}
             </h1>

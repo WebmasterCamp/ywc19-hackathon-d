@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { FC } from "react";
+import { type FC } from "react";
 
 export const Navbar: FC = () => {
     return (
         <nav className="w-full my-2 px-4 flex">
-            <h1>
+            <h1 className="font-noto">
                 Placeholder Name
             </h1>
             <div className="flex gap-x-4 ml-auto">
