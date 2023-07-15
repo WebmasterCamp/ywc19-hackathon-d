@@ -1,44 +1,26 @@
 import { Layout } from "~/components/Layout"
 import { type Expense, expenses } from "~/constants/expenses"
-import type { ColumnDef } from "@tanstack/react-table"
-import { DataTable } from "~/components/DataTable"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Table } from "antd"
+import { type ColumnsType } from "antd/es/table"
 
-export const columns: ColumnDef<Expense>[] = [
+const columns: ColumnsType<Expense> = [
   {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={table.getIsAllPageRowsSelected()}
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
+    title: 'Title',
+    dataIndex: 'title',
+    key: 'title',
   },
   {
-    accessorKey: "title",
-    header: "Title",
+    title: 'Description',
+    dataIndex: 'description',
+    key: 'description',
   },
-  {
-    accessorKey: "descripiton",
-    header: "Description",
-  },
-]
+];
 
 const ExpensesPage = () => {
   return (
     <Layout>
       <h1 className="font-bold">Expenses</h1>
-      <DataTable columns={columns} data={expenses} />
+      <Table columns={columns} dataSource={expenses} rowKey="title" />
     </Layout>
   )
 }
