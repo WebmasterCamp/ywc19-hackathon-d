@@ -5,16 +5,15 @@ import { Navbar } from '../Navbar'
 interface LayoutProps {
 	beforeContent?: ReactNode
 	children: ReactNode
-	px?: number
-	py?: number
+	psize: 'small' | 'large'
 }
 
-export const Layout: FC<LayoutProps> = ({ children, beforeContent, px = 4, py = 4 }) => {
+export const Layout: FC<LayoutProps> = ({ children, beforeContent, psize = 'small' }) => {
 	return (
 		<div className="flex flex-col w-full font-noto-looped">
 			<Navbar />
 			{beforeContent}
-			<div className={`px-${px} py-${py}`}>{children}</div>
+			<div className={psize === 'small' ? 'p-4' : 'p-20'}>{children}</div>
 		</div>
 	)
 }

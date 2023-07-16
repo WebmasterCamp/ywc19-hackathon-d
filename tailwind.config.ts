@@ -17,9 +17,9 @@ module.exports = {
 			},
 		},
 		extend: {
-			fontFamily : {
-				noto : "Noto Sans Thai",
-				'noto-looped' : "Noto Sans Thai Looped"
+			fontFamily: {
+				noto: 'Noto Sans Thai',
+				'noto-looped': 'Noto Sans Thai Looped',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
