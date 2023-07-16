@@ -1,6 +1,17 @@
+export interface Item {
+	title: string
+	cost: number
+}
+
 export interface Category {
 	title: string
 	disabled: boolean
+	items?: Item[]
+}
+
+export interface Phase {
+	title: string
+	categories: Category[]
 }
 
 export const preBirthCategories: Category[] = [
@@ -49,5 +60,20 @@ export const kindergartenCategories: Category[] = [
 	{
 		title: 'พี่เลี้ยงเด็ก',
 		disabled: true,
+	},
+]
+
+export const phases = [
+	{
+		title: 'ค่าใช้จ่ายก่อนคลอดบุตร',
+		categories: preBirthCategories,
+	},
+	{
+		title: 'วัยทารก',
+		categories: babyCategories,
+	},
+	{
+		title: 'วัยอนุบาล',
+		categories: kindergartenCategories,
 	},
 ]
