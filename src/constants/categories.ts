@@ -16,12 +16,34 @@ export interface Phase {
 
 export const preBirthCategories: Category[] = [
 	{
-		title: 'ตรวจสุขภาพมารดา',
-		disabled: false,
-	},
-	{
 		title: 'ฝากครรภ์',
 		disabled: false,
+		items: [
+			{
+				title: 'โรงพยาบาลบำรุงราษฎร์',
+				cost: 98000,
+			},
+			{
+				title: 'โรงพยาบาลเซนต์หลุยส์',
+				cost: 50000,
+			},
+			{
+				title: 'โรงพยาบาลเกษมราษฎร์ บางแค',
+				cost: 37000,
+			},
+			{
+				title: 'โรงพยาบาลพระรามเก้า',
+				cost: 85000,
+			},
+			{
+				title: 'โรงพยาบาลสมิติเวช สุขุมวิท',
+				cost: 50000,
+			},
+		],
+	},
+	{
+		title: 'ตรวจสุขภาพมารดา',
+		disabled: true,
 	},
 ]
 

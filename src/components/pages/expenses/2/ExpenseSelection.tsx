@@ -21,24 +21,30 @@ export const ExpenseSelection: FC<ExpenseSelectionProps> = ({ phase }) => {
 					</Button>
 				))}
 			</div>
-			<div className="mt-10 text-gray-900 text-2xl font-semibold">ค้นหา</div>
-			{phase.categories[selectedCategory]?.items?.map((item) => (
-				<Card key={item.title} horizontal imgSrc="">
-					<div className="flex">
-						<div>
-							<div className="text-gray-900 text-xl font-semibold leading-[30px]">{item.title}</div>
-						</div>
-						<div>
-							<div className="flex flex-col">
-								<div className="text-gray-900 text-xl font-semibold leading-[30px]">ค่าใช้จ่าย</div>
-								<div className="text-gray-500 text-xl font-medium leading-[30px]">
-									{item.cost} บาท
+			<div className="mt-10 text-gray-900 text-2xl font-semibold ">ค้นหา</div>
+			<div className="flex flex-col gap-8 w-full">
+				{phase.categories[selectedCategory]?.items?.map((item) => (
+					<Card key={item.title} horizontal imgSrc="/images/hospital1.png">
+						<div className="flex">
+							<div>
+								<div className="text-gray-900 text-xl font-semibold leading-[30px]">
+									{item.title}
+								</div>
+							</div>
+							<div>
+								<div className="flex flex-col">
+									<div className="text-gray-900 text-xl font-semibold leading-[30px]">
+										ค่าใช้จ่าย
+									</div>
+									<div className="text-gray-500 text-xl font-medium leading-[30px]">
+										{item.cost} บาท
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</Card>
-			))}
+					</Card>
+				))}
+			</div>
 		</div>
 	)
 }
