@@ -4,6 +4,7 @@ import { Steps } from '~/components/Step/Steps'
 import { expensesSteps } from '../1'
 import CostTimeline from '~/components/pages/CostTimeline'
 import { Expense } from '~/Expense'
+import { Divider } from '~/components/Divider'
 
 
 
@@ -31,6 +32,35 @@ const ExpensesPage = () => {
 						<Expense title="เตรียมอนุบาล" subtitle='ผ้าอ้อม, นมผง' price={10000} tailwindColor='bg-cyan-600' />
 						<Expense title="อนุบาล" subtitle='ค่าเทอม' price={10000} tailwindColor='bg-cyan-500' />
 						<Expense title="ประถม" subtitle='ค่าเทอม' price={10000} tailwindColor='bg-cyan-400' />
+					</div>
+					<div className="mt-4 flex flex-col gap-y-4">
+						<div className="flex gap-y-4">
+							<h1 className="text-xl font-bold">
+								ยอดรวมค่าใช้จ่ายทั้งหมด
+							</h1>
+							<h5 className="text-xl ml-auto font-bold">
+								40000 บาท
+							</h5>
+						</div>
+						<div className="w-full">
+							<Divider />
+						</div>
+						<div className="flex">
+							<h1 className="text-xl font-bold">
+								ระยะเวลาที่ใช้ในการเก็บ
+							</h1>
+							<h5 className="text-xl ml-auto font-bold">
+								XXX บาท
+							</h5>
+						</div>
+						<div className="flex">
+							<h1 className="text-xl font-bold">
+								ตกเดือนละ
+							</h1>
+							<h5 className="text-xl ml-auto font-bold">
+								XXX บาท
+							</h5>
+						</div>
 					</div>
 
 				</div>
