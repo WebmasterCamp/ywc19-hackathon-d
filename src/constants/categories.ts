@@ -1,6 +1,12 @@
+export interface Item {
+	title: string
+	cost: number
+}
+
 export interface Category {
 	title: string
 	disabled: boolean
+	items?: Item[]
 }
 
 export const preBirthCategories: Category[] = [
