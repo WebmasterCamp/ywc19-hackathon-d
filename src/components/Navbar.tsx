@@ -3,7 +3,7 @@ import { type FC } from "react";
 
 export const Navbar: FC = () => {
     return (
-        <nav className="w-full my-2 px-4 flex">
+        <nav className="w-full flex px-20 py-5 bg-teal-500 text-gray-50">
             <h1 className="font-noto">
                 Placeholder Name
             </h1>

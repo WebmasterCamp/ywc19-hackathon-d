@@ -13,7 +13,7 @@ export const Layout: FC<LayoutProps> = ({ children, beforeContent, psize = 'smal
 		<div className="flex flex-col w-full font-noto-looped">
 			<Navbar />
 			{beforeContent}
-			<div className={psize === 'small' ? 'p-4' : 'p-20'}>{children}</div>
-		</div>
+			<div className={psize === 'small' ? 'p-0' : 'p-20'}>{children}</div>
+		</div >
 	)
 }

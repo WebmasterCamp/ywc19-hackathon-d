@@ -1,17 +1,33 @@
 import { ExpenseLayout } from '~/components/Layout/ExpenseLayout'
 import { Layout } from '~/components/Layout/Layout'
-import { StageBar } from '~/components/StageBar'
+import { Steps, type StepsProps } from '~/components/Step/Steps'
+
+const steps: StepsProps["items"] = [
+  {
+    prompt: "กรอกข้อมูลรายได้",
+    step: 1
+  },
+  {
+    prompt: "วางแผนการเงิน",
+    step: 2
+  },
+  {
+    prompt: "สรุปแผนการเงิน",
+    step: 3
+  }
+]
 
 const ExpensesPage = () => {
   return (
     <Layout>
-      <ExpenseLayout title="เริ่มคำนวณวางแผนการเงินให้ลูกในอนาคตของคุณ">
-        <StageBar stages={[{
+      <ExpenseLayout title="เริ่มคำนวณวางแผนการเงินให้ลูกในอนาคตของคุณ" description="เริ่มคำนวณวางแผนการเงินให้ลูกในอนาคตของคุณ">
+        {/* <StageBar stages={[{
           title: '', description: "something"
         }]} activeStage={1} />
         <h1>
           ข้อมูลผู้ปกครอง
-        </h1>
+        </h1> */}
+        <Steps items={steps} />
 
       </ExpenseLayout>
     </Layout>
