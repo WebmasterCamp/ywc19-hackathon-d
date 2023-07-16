@@ -2,6 +2,7 @@
 module.exports = {
 	darkMode: ['class'],
 	content: [
+		'./node_modules/flowbite-react/**/*.js',
 		'./pages/**/*.{ts,tsx}',
 		'./components/**/*.{ts,tsx}',
 		'./app/**/*.{ts,tsx}',
@@ -16,9 +17,9 @@ module.exports = {
 			},
 		},
 		extend: {
-			fontFamily : {
-				noto : "Noto Sans Thai",
-				'noto-looped' : "Noto Sans Thai Looped"
+			fontFamily: {
+				noto: 'Noto Sans Thai',
+				'noto-looped': 'Noto Sans Thai Looped',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -76,5 +77,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
+	plugins: [require('tailwindcss-animate'), require('flowbite/plugin')],
 }
