@@ -51,18 +51,3 @@ export const kindergartenCategories: Category[] = [
 		disabled: true,
 	},
 ]
-
-export const primarySchoolCategories: Category[] = [
-	{
-		title: 'โรงเรียนประถม',
-		disabled: true,
-	},
-	{
-		title: 'ชุดนักเรียน',
-		disabled: true,
-	},
-	{
-		title: 'อุปกรณ์การเรียน',
-		disabled: true,
-	},
-]

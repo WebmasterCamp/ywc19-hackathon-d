@@ -2,12 +2,7 @@ import { ExpenseLayout } from '~/components/Layout/ExpenseLayout'
 import { Layout } from '~/components/Layout/Layout'
 import { Steps, type StepsProps } from '~/components/Step/Steps'
 import { ExpenseCategory } from '~/components/pages/expenses/2/ExpenseCategory'
-import {
-	babyCategories,
-	kindergartenCategories,
-	preBirthCategories,
-	primarySchoolCategories,
-} from '~/constants/categories'
+import { babyCategories, kindergartenCategories, preBirthCategories } from '~/constants/categories'
 
 import { expensesSteps } from '../1'
 
@@ -26,7 +21,6 @@ const ExpensesPage = () => {
 					<ExpenseCategory title="ค่าใช้จ่ายก่อนคลอดบุตร" categories={preBirthCategories} />
 					<ExpenseCategory title="วัยทารก" categories={babyCategories} />
 					<ExpenseCategory title="วัยอนุบาล" categories={kindergartenCategories} />
-					<ExpenseCategory title="วัยประถม" categories={primarySchoolCategories} />
 				</div>
 			</ExpenseLayout>
 		</Layout>
