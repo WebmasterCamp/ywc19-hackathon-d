@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 
-import { Button, Card } from 'flowbite-react'
+import { Button } from 'flowbite-react'
 import { atom, useAtom } from 'jotai'
 import { type Phase } from '~/constants/categories'
 
@@ -22,16 +22,17 @@ export const ExpenseSelection: FC<ExpenseSelectionProps> = ({ phase }) => {
 				))}
 			</div>
 			<div className="mt-10 text-gray-900 text-2xl font-semibold ">ค้นหา</div>
-			<div className="flex flex-col gap-8 w-full">
+			<div className="flex flex-col gap-8 w-full mt-4">
 				{phase.categories[selectedCategory]?.items?.map((item) => (
-					<Card key={item.title} horizontal imgSrc="/images/hospital1.png">
-						<div className="flex">
-							<div>
+					<div key={item.title} className="w-full">
+						<div className="flex border border-neutral-200 p-4 items-center">
+							<img src="/images/hospital1.png" alt="img" width={192} height={80} className="mr-4" />
+							<div className="w-28 flex-grow ">
 								<div className="text-gray-900 text-xl font-semibold leading-[30px]">
 									{item.title}
 								</div>
 							</div>
-							<div>
+							<div className="ml-4 w-28">
 								<div className="flex flex-col">
 									<div className="text-gray-900 text-xl font-semibold leading-[30px]">
 										ค่าใช้จ่าย
@@ -42,7 +43,7 @@ export const ExpenseSelection: FC<ExpenseSelectionProps> = ({ phase }) => {
 								</div>
 							</div>
 						</div>
-					</Card>
+					</div>
 				))}
 			</div>
 		</div>
