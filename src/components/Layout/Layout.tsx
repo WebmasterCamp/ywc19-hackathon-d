@@ -5,7 +5,7 @@ import { Navbar } from '../Navbar'
 interface LayoutProps {
 	beforeContent?: ReactNode
 	children: ReactNode
-	psize: 'small' | 'large'
+	psize?: 'small' | 'large'
 }
 
 export const Layout: FC<LayoutProps> = ({ children, beforeContent, psize = 'small' }) => {
