@@ -24,7 +24,16 @@ const steps: StepsProps['items'] = [
 	},
 ]
 
+interface SelectOption {
+	value: string
+	label: string
+}
+
 const ExpensesPage = () => {
+	const monthlyIncome: SelectOption[] = []
+	const monthlyDebt: SelectOption[] = []
+	const savings: SelectOption[] = []
+	const assets: SelectOption[] = []
 	return (
 		<Layout>
 			<ExpenseLayout title="เริ่มคำนวณวางแผนการเงินให้ลูกในอนาคตของคุณ">
@@ -37,12 +46,12 @@ const ExpensesPage = () => {
 						</div>
 						<div className="mt-10 flex gap-16">
 							<div className="flex flex-col gap-8">
-								<Select label="รายได้ต่อครัวเรือน/เดือน" options={[]} />
-								<Select label="มูลค่าเงินออมสะสม" options={[]} />
+								<Select label="รายได้ต่อครัวเรือน/เดือน" options={monthlyIncome} />
+								<Select label="มูลค่าเงินออมสะสม" options={monthlyDebt} />
 							</div>
 							<div className="flex flex-col gap-8">
-								<Select label="หนี้สินต่อครัวเรือน/เดือน" options={[]} />
-								<Select label="มูลค่ารวมสินทรัพย์อื่น" options={[]} />
+								<Select label="หนี้สินต่อครัวเรือน/เดือน" options={savings} />
+								<Select label="มูลค่ารวมสินทรัพย์อื่น" options={assets} />
 							</div>
 						</div>
 					</div>
