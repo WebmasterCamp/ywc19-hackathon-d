@@ -2,11 +2,10 @@ import { ExpenseLayout } from '~/components/Layout/ExpenseLayout'
 import { Layout } from '~/components/Layout/Layout'
 import { Steps, type StepsProps } from '~/components/Step/Steps'
 
-const steps: StepsProps["items"] = [
+export const expensesSteps: StepsProps["items"] = [
   {
     prompt: "กรอกข้อมูลรายได้",
     step: 1,
-    active: true
   },
   {
     prompt: "วางแผนการเงิน",
@@ -28,7 +27,7 @@ const ExpensesPage = () => {
         <h1>
           ข้อมูลผู้ปกครอง
         </h1> */}
-        <Steps items={steps} />
+        <Steps items={expensesSteps} />
 
       </ExpenseLayout>
     </Layout>
