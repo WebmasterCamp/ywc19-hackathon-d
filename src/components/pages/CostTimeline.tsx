@@ -1,33 +1,31 @@
-import { useAtom } from "jotai"
-import { useMemo } from "react"
-import { durationBeforeBirthByMonth, durationBeforePrePreSchoolByMonth, durationBeforePreSchoolByMonth, durationBeforePrimarySchoolByMonth } from "~/atoms/durationPerPhase"
+import { useExpensesRatio } from "../Hooks/useExpensesRatio"
+import { usePhaseLengthRatio } from "../Hooks/usePhaseLengthRatio"
 
-const ProgressBar = () => {
+const CostTimeline = () => {
 
-    const [durationBeforeBirth] = useAtom(durationBeforeBirthByMonth)
-    const [durationBeforePrepreSchool] = useAtom(durationBeforePrePreSchoolByMonth)
-    const [durationBeforePreSchool] = useAtom(durationBeforePreSchoolByMonth)
-    const [durationBeforePrimarySchool] = useAtom(durationBeforePrimarySchoolByMonth)
-
-    const totalTime = useMemo(() => {
-        return durationBeforeBirth + durationBeforePrepreSchool + durationBeforePreSchool + durationBeforePrimarySchool
-    }, [durationBeforeBirth, durationBeforePrepreSchool, durationBeforePreSchool, durationBeforePrimarySchool])
-
-    const beforeBirthDurationByPercent = useMemo(() => {
-        return durationBeforeBirth / totalTime * 100
-    }, [durationBeforeBirth, totalTime])
-    const beforePrepreSchoolByPercent = useMemo(() => {
-        return durationBeforePrepreSchool / totalTime * 100
-    }, [durationBeforePrepreSchool, totalTime])
-    const beforePreschoolByPrecent = useMemo(() => {
-        return durationBeforePreSchool / totalTime * 100
-    }, [durationBeforePreSchool, totalTime])
-    const beforePrimarySchoolByPrecent = useMemo(() => {
-        return durationBeforePrimarySchool / totalTime * 100
-    }, [durationBeforePrimarySchool, totalTime])
+    const { beforeBirthDurationByPercent, beforePrepreSchoolByPercent, beforePreschoolByPrecent, beforePrimarySchoolByPrecent } = usePhaseLengthRatio()
+    const { priceBeforeBirth, priceBeforePreSchool, priceBeforePrepreSchool, priceBeforePrimarySchool } = useExpensesRatio({
+        costBeforeBirth: 10000,
+        costBeforePrepreSchool: 10000,
+        costBeforePreSchool: 10000,
+        costBeforePrimarySchool: 10000,
+    })
 
     return (
         <div className="flex flex-col gap-y-8">
+            {/* Histrogram */}
+            <div style={{
+                width: `${beforeBirthDurationByPercent}%`
+            }} className="flex justify-center">
+                <div className="h-80 flex flex-col-reverse justify-center items-end">
+                    <div style={{
+                        height: `${20}%`
+                    }} className="bg-amber-500 w-24 relative"></div>
+                    <div style={{
+                        height: `${80}%`
+                    }} className="bg-yellow-600 w-24 relative"></div>
+                </div>
+            </div>
             {/* Mark */}
             <div className="flex flex-col gap-y-8">
                 <div className="w-full h-0.5 flex">
@@ -95,8 +93,8 @@ const ProgressBar = () => {
                 <div style={{
                     width: `${beforePrimarySchoolByPrecent}%`
                 }} className={`text-center inline-block bg-cyan-600 h-full relative`}></div>
-            </div></div>
+            </div></div >
     )
 }
 
-export default ProgressBar
+export default CostTimeline

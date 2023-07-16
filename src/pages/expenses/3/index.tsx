@@ -2,18 +2,16 @@ import { ExpenseLayout } from '~/components/Layout/ExpenseLayout'
 import { Layout } from '~/components/Layout/Layout'
 import { Steps } from '~/components/Step/Steps'
 import { expensesSteps } from '../1'
-import ProgressBar from '~/components/pages/ProgressBar'
+import CostTimeline from '~/components/pages/CostTimeline'
 
 
 
 
 const ExpensesPage = () => {
 
-
 	if (expensesSteps[2]?.prompt) {
 		expensesSteps[2].active = true
 	}
-
 
 	return (
 		<Layout>
@@ -29,7 +27,7 @@ const ExpensesPage = () => {
 
 					</div>
 
-					<ProgressBar />
+					<CostTimeline />
 
 				</div>
 
