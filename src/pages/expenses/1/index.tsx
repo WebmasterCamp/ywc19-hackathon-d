@@ -29,12 +29,98 @@ interface SelectOption {
 }
 
 const ExpensesPage = () => {
-	if (expensesSteps[0]?.prompt) {
-		expensesSteps[0].active = true
-	}
-
-	const monthlyIncome: SelectOption[] = []
-	const monthlyDebt: SelectOption[] = []
+	const monthlyIncome: SelectOption[] = [
+		{
+			value: '9999',
+			label: '0 - 9,999',
+		},
+		{
+			value: '19999',
+			label: '10000 - 19,999',
+		},
+		{
+			value: '29999',
+			label: '20000 - 29,999',
+		},
+		{
+			value: '39999',
+			label: '30000 - 39,999',
+		},
+		{
+			value: '49999',
+			label: '40000 - 49,999',
+		},
+		{
+			value: '59999',
+			label: '50000 - 59,999',
+		},
+		{
+			value: '69999',
+			label: '60000 - 69,999',
+		},
+		{
+			value: '79999',
+			label: '70000 - 79,999',
+		},
+		{
+			value: '89999',
+			label: '80000 - 89,999',
+		},
+		{
+			value: '99999',
+			label: '90000 - 99,999',
+		},
+		{
+			value: '100000+',
+			label: '100,000 บาทขึ้นไป',
+		},
+	]
+	const monthlyDebt: SelectOption[] = [
+		{
+			value: '9999',
+			label: '0 - 9,999',
+		},
+		{
+			value: '19999',
+			label: '10000 - 19,999',
+		},
+		{
+			value: '29999',
+			label: '20000 - 29,999',
+		},
+		{
+			value: '39999',
+			label: '30000 - 39,999',
+		},
+		{
+			value: '49999',
+			label: '40000 - 49,999',
+		},
+		{
+			value: '59999',
+			label: '50000 - 59,999',
+		},
+		{
+			value: '69999',
+			label: '60000 - 69,999',
+		},
+		{
+			value: '79999',
+			label: '70000 - 79,999',
+		},
+		{
+			value: '89999',
+			label: '80000 - 89,999',
+		},
+		{
+			value: '99999',
+			label: '90000 - 99,999',
+		},
+		{
+			value: '100000+',
+			label: '100,000 บาทขึ้นไป',
+		},
+	]
 	const savings: SelectOption[] = []
 	const assets: SelectOption[] = []
 	return (
@@ -44,7 +130,7 @@ const ExpensesPage = () => {
 				description="เริ่มคำนวณวางแผนการเงินให้ลูกในอนาคตของคุณ"
 			>
 				<div className="flex flex-col gap-12">
-					<Steps items={expensesSteps} />
+					<Steps items={expensesSteps} activeStep={1} />
 					<Divider />
 					<div className="flex flex-col items-center">
 						<div>

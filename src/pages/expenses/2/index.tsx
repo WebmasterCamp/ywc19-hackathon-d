@@ -9,14 +9,10 @@ import { expensesSteps } from '../1'
 const items: StepsProps['items'] = expensesSteps
 
 const ExpensesPage = () => {
-	if (items[1]?.prompt !== undefined) {
-		items[1].active = true
-	}
-
 	return (
 		<Layout>
 			<ExpenseLayout title="วางแผนการเงินให้ลูก">
-				<Steps items={items} />
+				<Steps items={items} activeStep={2} />
 				<div className="flex flex-col items-center gap-12 mt-12 px-24">
 					{phases.map((phase) => (
 						<ExpensePhase key={phase.title} phase={phase} />
