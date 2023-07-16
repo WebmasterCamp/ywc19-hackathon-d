@@ -5,7 +5,8 @@ import { Steps, type StepsProps } from '~/components/Step/Steps'
 const steps: StepsProps["items"] = [
   {
     prompt: "กรอกข้อมูลรายได้",
-    step: 1
+    step: 1,
+    active: true
   },
   {
     prompt: "วางแผนการเงิน",
