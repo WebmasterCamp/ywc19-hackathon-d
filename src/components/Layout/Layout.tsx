@@ -10,7 +10,7 @@ interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = ({ children, beforeContent, psize = 'none' }) => {
 	return (
-		<div className="flex flex-col w-full font-noto-looped">
+		<div className="flex flex-col w-full font-noto-looped max-w-screen overflow-x-hidden">
 			<Navbar />
 			{beforeContent}
 			<div className={psize === 'none' ? 'p-0' : 'p-20'}>{children}</div>

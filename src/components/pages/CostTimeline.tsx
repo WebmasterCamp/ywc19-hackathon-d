@@ -14,18 +14,62 @@ const CostTimeline = () => {
     return (
         <div className="flex flex-col gap-y-8">
             {/* Histrogram */}
-            <div style={{
-                width: `${beforeBirthDurationByPercent}%`
-            }} className="flex justify-center">
-                <div className="h-80 flex flex-col-reverse justify-center items-end">
-                    <div style={{
-                        height: `${20}%`
-                    }} className="bg-amber-500 w-24 relative"></div>
-                    <div style={{
-                        height: `${80}%`
-                    }} className="bg-yellow-600 w-24 relative"></div>
+            <div className="w-full flex items-end mb-8">
+                {/* birth */}
+                <div style={{
+                    width: `${beforeBirthDurationByPercent}%`
+                }} className="flex justify-center">
+                    <div className="h-48 flex flex-col-reverse justify-center items-end">
+                        <div style={{
+                            height: `${20}%`
+                        }} className="bg-yellow-400 w-24 relative"></div>
+                        <div style={{
+                            height: `${40}%`
+                        }} className="bg-yellow-300 w-24 relative"></div>
+                        <div style={{
+                            height: `${40}%`
+                        }} className="bg-yellow-200 w-24 relative"></div>
+                    </div>
+
+                </div>
+                {/* prepreschool */}
+                <div style={{
+                    width: `${beforePrepreSchoolByPercent}%`
+                }} className="flex justify-center">
+                    <div className="h-80 flex flex-col-reverse justify-center items-end">
+                        <div style={{
+                            height: `${80}%`
+                        }} className="bg-amber-300 w-24 relative"></div>
+                        <div style={{
+                            height: `${20}%`
+                        }} className="bg-yellow-200 w-24 relative"></div>
+                    </div>
+                </div>
+                {/* preschool */}
+                <div style={{
+                    width: `${beforePreschoolByPrecent}%`
+                }} className="flex justify-center">
+                    <div className="h-56 flex flex-col-reverse justify-center items-end">
+                        <div style={{
+                            height: `${60}%`
+                        }} className="bg-amber-300 w-24 relative"></div>
+                        <div style={{
+                            height: `${40}%`
+                        }} className="bg-yellow-200 w-24 relative"></div>
+                    </div>
+                </div>
+                {/* primary */}
+                <div style={{
+                    width: `${beforePrimarySchoolByPrecent}%`
+                }} className="flex justify-center">
+                    <div className="h-72 flex flex-col-reverse justify-center items-end">
+                        <div style={{
+                            height: `${100}%`
+                        }} className="bg-yellow-200 w-24 relative"></div>
+                    </div>
                 </div>
             </div>
+
             {/* Mark */}
             <div className="flex flex-col gap-y-8">
                 <div className="w-full h-0.5 flex">
