@@ -29,10 +29,6 @@ interface SelectOption {
 }
 
 const ExpensesPage = () => {
-	if (expensesSteps[0]?.prompt) {
-		expensesSteps[0].active = true
-	}
-
 	const monthlyIncome: SelectOption[] = [
 		{
 			value: '9999',
@@ -134,7 +130,7 @@ const ExpensesPage = () => {
 				description="เริ่มคำนวณวางแผนการเงินให้ลูกในอนาคตของคุณ"
 			>
 				<div className="flex flex-col gap-12">
-					<Steps items={expensesSteps} />
+					<Steps items={expensesSteps} activeStep={1} />
 					<Divider />
 					<div className="flex flex-col items-center">
 						<div>
