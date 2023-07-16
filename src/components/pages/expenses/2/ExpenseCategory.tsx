@@ -4,6 +4,8 @@ import { Button } from 'flowbite-react'
 import { Divider } from '~/components/Divider'
 import { type Category } from '~/constants/categories'
 
+import { NewCardButton } from './NewCardButton'
+
 interface ExpensePhaseProps {
 	title: string
 	categories: Category[]
@@ -20,6 +22,13 @@ export const ExpenseCategory: FC<ExpensePhaseProps> = ({ title, categories }) =>
 						{category.title}
 					</Button>
 				))}
+			</div>
+			<div className="w-full grid grid-cols-4 gap-6">
+				<NewCardButton
+					onClick={() => {
+						alert('test')
+					}}
+				/>
 			</div>
 		</div>
 	)
