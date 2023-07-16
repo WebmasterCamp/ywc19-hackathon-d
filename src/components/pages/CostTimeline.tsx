@@ -22,13 +22,13 @@ const CostTimeline = () => {
                     <div className="h-48 flex flex-col-reverse justify-center items-end">
                         <div style={{
                             height: `${20}%`
-                        }} className="bg-yellow-400 w-24 relative"></div>
+                        }} className="bg-cyan-900 w-24 relative"></div>
                         <div style={{
                             height: `${40}%`
-                        }} className="bg-yellow-300 w-24 relative"></div>
+                        }} className="bg-cyan-700 w-24 relative"></div>
                         <div style={{
                             height: `${40}%`
-                        }} className="bg-yellow-200 w-24 relative"></div>
+                        }} className="bg-cyan-500 w-24 relative"></div>
                     </div>
 
                 </div>
@@ -39,10 +39,10 @@ const CostTimeline = () => {
                     <div className="h-80 flex flex-col-reverse justify-center items-end">
                         <div style={{
                             height: `${80}%`
-                        }} className="bg-amber-300 w-24 relative"></div>
+                        }} className="bg-cyan-900 w-24 relative"></div>
                         <div style={{
                             height: `${20}%`
-                        }} className="bg-yellow-200 w-24 relative"></div>
+                        }} className="bg-cyan-700 w-24 relative"></div>
                     </div>
                 </div>
                 {/* preschool */}
@@ -52,10 +52,10 @@ const CostTimeline = () => {
                     <div className="h-56 flex flex-col-reverse justify-center items-end">
                         <div style={{
                             height: `${60}%`
-                        }} className="bg-amber-300 w-24 relative"></div>
+                        }} className="bg-cyan-900 w-24 relative"></div>
                         <div style={{
                             height: `${40}%`
-                        }} className="bg-yellow-200 w-24 relative"></div>
+                        }} className="bg-cyan-700 w-24 relative"></div>
                     </div>
                 </div>
                 {/* primary */}
@@ -65,7 +65,7 @@ const CostTimeline = () => {
                     <div className="h-72 flex flex-col-reverse justify-center items-end">
                         <div style={{
                             height: `${100}%`
-                        }} className="bg-yellow-200 w-24 relative"></div>
+                        }} className="bg-cyan-900 w-24 relative"></div>
                     </div>
                 </div>
             </div>
