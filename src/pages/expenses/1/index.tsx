@@ -29,6 +29,11 @@ interface SelectOption {
 }
 
 const ExpensesPage = () => {
+
+  if (expensesSteps[0]?.prompt) {
+    expensesSteps[0].active = true
+  }
+
   const monthlyIncome: SelectOption[] = []
   const monthlyDebt: SelectOption[] = []
   const savings: SelectOption[] = []
@@ -39,27 +44,29 @@ const ExpensesPage = () => {
 
         <Steps items={expensesSteps} />
         <Divider />
-        <div>
-          <div className="text-gray-900 text-4xl font-semibold">
-            กรอกข้อมูลเพื่อเริ่มต้นวางแผนการเงิน
-          </div>
-          <div className="mt-10 flex gap-16">
-            <div className="flex flex-col gap-8">
-              <Select label="รายได้ต่อครัวเรือน/เดือน" options={monthlyIncome} />
-              <Select label="มูลค่าเงินออมสะสม" options={monthlyDebt} />
+        <div className="flex flex-col items-center">
+          <div>
+            <div className="text-gray-900 text-4xl font-semibold">
+              กรอกข้อมูลเพื่อเริ่มต้นวางแผนการเงิน
             </div>
-            <div className="flex flex-col gap-8">
-              <Select label="หนี้สินต่อครัวเรือน/เดือน" options={savings} />
-              <Select label="มูลค่ารวมสินทรัพย์อื่น" options={assets} />
+            <div className="mt-10 flex gap-16">
+              <div className="flex flex-col gap-8">
+                <Select label="รายได้ต่อครัวเรือน/เดือน" options={monthlyIncome} />
+                <Select label="มูลค่าเงินออมสะสม" options={monthlyDebt} />
+              </div>
+              <div className="flex flex-col gap-8">
+                <Select label="หนี้สินต่อครัวเรือน/เดือน" options={savings} />
+                <Select label="มูลค่ารวมสินทรัพย์อื่น" options={assets} />
+              </div>
             </div>
           </div>
+          <Link href="/expenses/2" className="mt-8">
+            <Button className="w-[505px] mt-16">
+              เริ่มต้นวางแผนการเงินแบบละเอียด
+              <AiOutlineArrowRight className="ml-2" />
+            </Button>
+          </Link>
         </div>
-        <Link href="/expenses/2" className="mt-8">
-          <Button className="w-[505px]">
-            เริ่มต้นวางแผนการเงินแบบละเอียด
-            <AiOutlineArrowRight className="ml-2" />
-          </Button>
-        </Link>
       </ExpenseLayout>
     </Layout>
   )

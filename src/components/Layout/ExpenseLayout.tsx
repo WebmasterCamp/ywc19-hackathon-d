@@ -23,7 +23,7 @@ export const ExpenseLayout: FC<ExpenseLayoutProps> = ({
                     }
                 </h2>}
             </div>
-            <div className="w-full h-full p-8">
+            <div className="w-full h-full px-20 py-8">
                 {
                     children
                 }
