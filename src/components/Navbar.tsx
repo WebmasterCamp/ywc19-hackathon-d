@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const Navbar: FC = () => {
 	return (
-		<nav className="w-full flex px-20 py-5 bg-teal-500 text-gray-50 relative">
+		<nav className="w-full flex px-20 py-5 bg-teal-500 text-gray-50 relative font-noto-looped">
 			<div className="w-[140.3625px] h-[47.75px] relative">
 				<Image src={'/babyfuture.svg'} fill alt="Babyfuture" />
 			</div>
