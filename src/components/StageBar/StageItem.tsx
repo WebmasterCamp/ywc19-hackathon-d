@@ -15,9 +15,8 @@ export const StageItem: FC<StageItemProps> = ({
 }) => {
 	return (
 		<div
-			className={`${className} p-4 flex flex-row space-x rounded-2xl justify-start gap-5 ${
-				isActive ? 'bg-zinc-600' : 'bg-zinc-100'
-			}`}
+			className={`${className} w-full p-4 flex flex-row space-x rounded-2xl justify-start gap-5 ${isActive ? 'bg-zinc-600' : 'bg-zinc-100'
+				}`}
 		>
 			<div className="rounded-full w-20 h-20 bg-zinc-300" />
 			<div className="flex flex-col justify-center gap-2">
