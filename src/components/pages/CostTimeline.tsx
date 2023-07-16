@@ -126,18 +126,30 @@ const CostTimeline = () => {
                     width: `${beforeBirthDurationByPercent}%`
                 }} className={`text-center inline-block w-[${beforeBirthDurationByPercent * 100}%] bg-cyan-700 h-full relative`}>
                     <div className="grid place-items-center absolute inset-0" >
-                        <h1>200 บาทต่อเดือน</h1>
+                        <h1>10 เดือน</h1>
                     </div>
                 </div>
                 <div style={{
                     width: `${beforePrepreSchoolByPercent}%`
-                }} className={`text-center inline-block bg-cyan-500 h-full relative`}></div>
+                }} className={`text-center inline-block bg-cyan-500 h-full relative`}>
+                    <div className="grid place-items-center absolute inset-0" >
+                        <h1>2 ปี</h1>
+                    </div>
+                </div>
                 <div style={{
                     width: `${beforePreschoolByPrecent}%`
-                }} className={`text-center inline-block bg-cyan-400 h-full relative`}></div>
+                }} className={`text-center inline-block bg-cyan-400 h-full relative`}>
+                    <div className="grid place-items-center absolute inset-0" >
+                        <h1>1 ปี</h1>
+                    </div>
+                </div>
                 <div style={{
                     width: `${beforePrimarySchoolByPrecent}%`
-                }} className={`text-center inline-block bg-cyan-600 h-full relative`}></div>
+                }} className={`text-center inline-block bg-cyan-600 h-full relative`}>
+                    <div className="grid place-items-center absolute inset-0" >
+                        <h1>2 ปี</h1>
+                    </div>
+                </div>
             </div></div >
     )
 }
