@@ -14,7 +14,7 @@ const BlogsListPage = () => {
 					{blogs.map((blog) => (
 						<Link href={`/blogs/${blog.slug}`} key={blog.slug}>
 							<Card className="w-96">
-								<img src={blog.imageURL} alt="blog image" className="h-[136px]" />
+								{/* <img src={blog.imageURL} alt="blog image" className="h-[136px]" /> */}
 								<div className="text-gray-900 text-2xl font-bold leading-[30px]">{blog.title}</div>
 								<Button>
 									Read more

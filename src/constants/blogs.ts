@@ -31,7 +31,7 @@ export const blogs: Blog[] = [
 	{
 		slug: '2',
 		title: 'รีวิวการรับบริการจากจากคุณเกด คุณแม่มือใหม่วัย 27 ปี',
-		imageURL: 'https://picsum.photos/1440/585',
+		imageURL: '/images/blog-2.jpg',
 		tags: ['ค่าใช้จ่าย', 'เลี้ยงดูบุตร'],
 		createdAt: new Date('2023-07-16'),
 		author: 'ปอนด์',
