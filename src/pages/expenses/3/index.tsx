@@ -42,43 +42,58 @@ const ExpensesPage = () => {
 						/>
 						<Expense title="อนุบาล" subtitle="ค่าเทอม" price={10000} tailwindColor="bg-cyan-500" />
 						<Expense title="ประถม" subtitle="ค่าเทอม" price={10000} tailwindColor="bg-cyan-400" />
+
+						<div className="mt-4 flex flex-col gap-y-4">
+							<div className="flex gap-y-4">
+								<h1 className="text-xl font-bold">ยอดรวมค่าใช้จ่ายทั้งหมด</h1>
+								<h5 className="text-xl ml-auto font-bold">40000 บาท</h5>
+							</div>
+							<div className="w-full">
+								<Divider />
+							</div>
+							<div className="flex">
+								<h1 className="text-xl font-bold">ระยะเวลาที่ใช้ในการเก็บ</h1>
+								<h5 className="text-xl ml-auto font-bold">XXX บาท</h5>
+							</div>
+							<div className="flex">
+								<h1 className="text-xl font-bold">ตกเดือนละ</h1>
+								<h5 className="text-xl ml-auto font-bold">XXX บาท</h5>
+							</div>
+						</div>
+
 					</div>
-					<div className="mt-4 flex flex-col gap-y-4">
-						<div className="flex gap-y-4">
-							<h1 className="text-xl font-bold">ยอดรวมค่าใช้จ่ายทั้งหมด</h1>
-							<h5 className="text-xl ml-auto font-bold">40000 บาท</h5>
-						</div>
-						<div className="w-full">
-							<Divider />
-						</div>
-						<div className="flex">
-							<h1 className="text-xl font-bold">ระยะเวลาที่ใช้ในการเก็บ</h1>
-							<h5 className="text-xl ml-auto font-bold">XXX บาท</h5>
-						</div>
-						<div className="flex">
-							<h1 className="text-xl font-bold">ตกเดือนละ</h1>
-							<h5 className="text-xl ml-auto font-bold">XXX บาท</h5>
+
+					<div className="flex flex-col items-center justify-center gap-y-4">
+						<button className="bg-cyan-600 text-white w-80 h-12 rounded-lg">
+							แก้ไขแผนการเงิน
+						</button>
+						<button className="border-cyan-600 border-2 w-80 h-12 rounded-lg">
+							ล้างแผนการเงิน
+						</button>
+					</div>
+
+					<div className="my-4">
+						<h1 className="text-4xl font-semibold text-gray-900">ตัวเลือกทางการเงิน</h1>
+						<div className="flex flex-wrap gap-6 py-4 overflow-y-hidden">
+							{[1, 2, 3].map((_, index) => (
+								<Card key={index} className="w-80">
+									<img src="https://picsum.photos/1440/585" alt="blog image" className="h-[136px]" />
+									<div className="text-gray-900 text-xl font-bold leading-[30px]">
+										ออมผ่านประกันชีวิต
+									</div>
+									<Button>
+										Read more
+										<AiOutlineArrowRight className="ml-2" />
+									</Button>
+								</Card>
+							))}
 						</div>
 					</div>
+
+
 				</div>
 
-				<div>
-					<h1 className="text-4xl font-semibold text-gray-900">ตัวเลือกทางการเงิน</h1>
-					<div className="flex flex-wrap gap-6">
-						{[1, 2, 3].map((_, index) => (
-							<Card key={index} className="w-96">
-								<img src="https://picsum.photos/1440/585" alt="blog image" className="h-[136px]" />
-								<div className="text-gray-900 text-2xl font-bold leading-[30px]">
-									ออมผ่านประกันชีวิต
-								</div>
-								<Button>
-									Read more
-									<AiOutlineArrowRight className="ml-2" />
-								</Button>
-							</Card>
-						))}
-					</div>
-				</div>
+
 			</ExpenseLayout>
 		</Layout>
 	)
