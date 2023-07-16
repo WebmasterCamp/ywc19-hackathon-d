@@ -21,7 +21,7 @@ export const ExpenseSelection: FC<ExpenseSelectionProps> = ({ phase }) => {
 					</Button>
 				))}
 			</div>
-			<div className="text-gray-900 text-2xl font-semibold">ค้นหา</div>
+			<div className="mt-10 text-gray-900 text-2xl font-semibold">ค้นหา</div>
 			{phase.categories[selectedCategory]?.items?.map((item) => (
 				<Card key={item.title} horizontal imgSrc="">
 					<div className="flex">
